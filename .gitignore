@@ -1,0 +1,18 @@
+# Local operating-system files
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.vscode/
+.idea/
+
+# Runtime configuration for a future server deployment
+.env
+.env.*
+!.env.example
+.env.local
+
+# Dependencies and builds if a framework is added later
+node_modules/
+dist/
+build/

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Free, verified South African jobs." />
+    <title>WorkSA | Find verified jobs in South Africa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="WorkSA home"><span>work</span>SA<i></i></a>
+      <nav><a href="#jobs">Find jobs</a><a href="#categories">Categories</a><a href="#how">How it works</a></nav>
+      <button class="admin-link" data-view="login">Admin portal <span>→</span></button>
+    </header>
+
+    <main id="publicApp">
+      <section class="hero" id="home">
+        <div class="hero-copy"><p class="eyebrow">FOR SOUTH AFRICAN JOBSEEKERS</p><h1>Good work starts <em>here.</em></h1><p class="intro">Browse verified opportunities from employers, recruiters and trusted organisations. No account. No CV upload. No fee.</p>
+          <div class="hero-search"><label><span>⌕</span><input id="heroSearch" placeholder="Job title, keyword or employer" /></label><button id="findJobs">Find jobs <span>→</span></button></div>
+          <div class="quick-tags"><span>Popular:</span><button>General Worker</button><button>Driver</button><button>Admin</button><button>Learnership</button></div>
+        </div>
+        <aside class="hero-card"><div class="arc"></div><p>NEW THIS WEEK</p><strong><span id="heroCount">0</span> verified roles</strong><small>Across all nine provinces</small><div class="people"><b>✓</b><b>✓</b><b>✓</b><span>Free for everyone</span></div></aside>
+      </section>
+      <section class="trust-strip"><span>✓ Always free to use</span><span>✓ Verified sources</span><span>✓ Apply directly to employers</span><span>✓ New jobs every day</span></section>
+      <section class="categories section" id="categories"><div class="section-heading"><div><p class="eyebrow">EXPLORE BY FIELD</p><h2>Find your place.</h2></div><button class="text-button" data-action="show-all-categories">View all categories <span>→</span></button></div><div id="categoryGrid" class="category-grid"></div></section>
+      <aside class="ad-banner" aria-label="Advertisement"><span>ADVERTISEMENT</span><div>Promote your business to active South African jobseekers</div><small>Banner ad space</small></aside>
+      <section class="jobs-section section" id="jobs"><div class="section-heading"><div><p class="eyebrow">OPEN OPPORTUNITIES</p><h2>Latest verified jobs.</h2></div><button class="filter-toggle" id="filterToggle">Filters <span>☷</span></button></div>
+        <div class="job-layout"><aside class="filters" id="filters"><div class="filter-head"><strong>Filter jobs</strong><button id="clearFilters">Clear all</button></div><label>Province<select id="provinceFilter"><option value="">All provinces</option></select></label><label>Job type<select id="typeFilter"><option value="">All job types</option></select></label><label>Category<select id="categoryFilter"><option value="">All categories</option></select></label><label>Closing date<select id="dateFilter"><option value="">Any closing date</option><option value="7">Next 7 days</option><option value="14">Next 14 days</option><option value="30">Next 30 days</option></select></label></aside>
+          <div class="jobs-content"><div class="jobs-toolbar"><span id="resultCount"></span><select id="sortJobs"><option value="recent">Newest first</option><option value="closing">Closing soon</option></select></div><div id="jobList" class="job-list"></div><div id="emptyState" class="empty-state" hidden><span>⌕</span><h3>No jobs found</h3><p>Try changing your search or filters.</p><button id="emptyClear">Clear filters</button></div></div>
+        </div></section>
+      <section class="how section" id="how"><p class="eyebrow">SIMPLE &amp; DIRECT</p><h2>Jobs without the runaround.</h2><div class="steps"><article><b>01</b><h3>Browse verified jobs</h3><p>Search current vacancies from trusted sources around South Africa.</p></article><article><b>02</b><h3>Read the details</h3><p>See the requirements, closing date and exactly how to apply.</p></article><article><b>03</b><h3>Apply directly</h3><p>Use the employer's official email or application link. It's that simple.</p></article></div></section>
+    </main>
+    <section id="jobDetail" class="view" hidden></section>
+    <section id="adminApp" class="admin-view" hidden></section>
+    <footer><a class="brand" href="#home"><span>work</span>SA<i></i></a><p>Free access to verified South African opportunities.</p><small>© 2026 WorkSA. Built for opportunity.</small></footer>
+    <div id="toast" role="status"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
