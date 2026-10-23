@@ -11,6 +11,7 @@ Open `index.html` in a web browser to use the interface demo. No build step or d
 1. In Supabase, open **SQL Editor**, create a new query, paste the contents of `supabase/schema.sql`, and run it.
 2. In **Authentication > Users**, create the single WorkSA owner account.
 3. Run `supabase/owner-policy.sql` in the SQL Editor after creating the owner user. This locks admin access to that one UUID.
+4. Run `supabase/inbox.sql` to enable the public Contact and Advertise a Job forms. Their messages appear in the owner-only Admin Inbox.
 4. Store the project URL and publishable key in `.env.local`; do not commit this file.
 
 The publishable key is suitable for the browser only when the Row Level Security policies in the schema are enabled. Never use a Supabase service-role key in browser code.

@@ -9,11 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="contact.css" />
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="#home" aria-label="WorkSA home"><span>work</span>SA<i></i></a>
-      <nav><a href="#jobs">Find jobs</a><a href="#categories">Categories</a><a href="#how">How it works</a></nav>
+      <nav><a href="#jobs">Find jobs</a><a href="#categories">Categories</a><a href="#advertise">Advertise a job</a><a href="#contact">Contact</a></nav>
     </header>
 
     <main id="publicApp">
@@ -32,6 +33,8 @@
           <div class="jobs-content"><div class="jobs-toolbar"><span id="resultCount"></span><select id="sortJobs"><option value="recent">Newest first</option><option value="closing">Closing soon</option></select></div><div id="jobList" class="job-list"></div><div id="emptyState" class="empty-state" hidden><span>⌕</span><h3>No jobs found</h3><p>Try changing your search or filters.</p><button id="emptyClear">Clear filters</button></div></div>
         </div></section>
       <section class="how section" id="how"><p class="eyebrow">SIMPLE &amp; DIRECT</p><h2>Jobs without the runaround.</h2><div class="steps"><article><b>01</b><h3>Browse verified jobs</h3><p>Search current vacancies from trusted sources around South Africa.</p></article><article><b>02</b><h3>Read the details</h3><p>See the requirements, closing date and exactly how to apply.</p></article><article><b>03</b><h3>Apply directly</h3><p>Use the employer's official email or application link. It's that simple.</p></article></div></section>
+      <section class="contact-section section" id="advertise"><div><p class="eyebrow">FOR EMPLOYERS &amp; RECRUITERS</p><h2>Advertise a verified vacancy.</h2><p>Tell us about the role or campaign and our team will contact you.</p></div><form class="contact-form" data-inquiry="employer"><label>Your name<input name="name" required /></label><label>Work email<input name="email" type="email" required /></label><label>Company<input name="company" required /></label><label>Phone number<input name="phone" /></label><label class="wide">Job or advertising enquiry<textarea name="message" rows="4" required placeholder="Tell us about the vacancy or advertising package you need."></textarea></label><button type="submit">Send employer enquiry →</button><small class="form-message"></small></form></section>
+      <section class="contact-section section contact-light" id="contact"><div><p class="eyebrow">CONTACT WORKSA</p><h2>How can we help?</h2><p>Report a listing, request help or share feedback. We read every message.</p></div><form class="contact-form" data-inquiry="contact"><label>Your name<input name="name" required /></label><label>Email address<input name="email" type="email" required /></label><label class="wide">Subject<input name="subject" required /></label><label class="wide">Message<textarea name="message" rows="4" required></textarea></label><button type="submit">Send message →</button><small class="form-message"></small></form></section>
     </main>
     <section id="jobDetail" class="view" hidden></section>
     <section id="adminApp" class="admin-view" hidden></section>
