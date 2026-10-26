@@ -18,7 +18,7 @@ The publishable key is suitable for the browser only when the Row Level Security
 
 ## Included routes/views
 
-- Public job listings, job details, search, filters and categories
+- Public job, funding and RFQ listings with dedicated routes (`#jobs`, `#funding`, `#rfqs`)
 - Admin sign-in and dashboard
 - Job creation, draft, review, publish, unpublish and expiry views
 - CSV and JSON bulk import validation
@@ -27,6 +27,10 @@ The publishable key is suitable for the browser only when the Row Level Security
 The current admin panel is accessed with the **Admin portal** button in the shared site header. A production release should replace the demo client-side access with a real backend, database, server-side authentication and role-based permissions.
 
 The public navigation never exposes the administrator portal. In production, access it directly at `/admin`; deploy with a hosting configuration that rewrites this route to the application entry point. During local static preview, use `/#/admin`.
+
+## Funding and RFQs
+
+Run `supabase/migrations/001_add_listing_types.sql` in the Supabase SQL Editor for an existing production database before deploying. The admin **Add opportunity** form then lets publishers choose **Job**, **Funding**, or **RFQ**. Every listing must retain an original source URL and an application/submission email or URL.
 
 ## Commit
 

@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Free, verified South African jobs." />
-    <title>WorkSA | Find verified jobs in South Africa</title>
+    <meta name="description" content="Free, verified South African jobs, funding and RFQs." />
+    <title>WorkSA | Verified opportunities in South Africa</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
@@ -14,7 +14,7 @@
   <body>
     <header class="site-header">
       <a class="brand" href="#home" aria-label="WorkSA home"><span>work</span>SA<i></i></a>
-      <nav><a href="#jobs">Find jobs</a><a href="#categories">Categories</a><a href="#advertise">Advertise a job</a><a href="#contact">Contact</a></nav>
+      <nav><a href="#jobs">Jobs</a><a href="#funding">Funding</a><a href="#rfqs">RFQs</a><a href="#categories">Categories</a><a href="#advertise">Advertise</a><a href="#contact">Contact</a></nav>
     </header>
 
     <main id="publicApp">
@@ -36,6 +36,7 @@
       <section class="contact-section section" id="advertise"><div><p class="eyebrow">FOR EMPLOYERS &amp; RECRUITERS</p><h2>Advertise a verified vacancy.</h2><p>Tell us about the role or campaign and our team will contact you.</p></div><form class="contact-form" data-inquiry="employer"><label>Your name<input name="name" required /></label><label>Work email<input name="email" type="email" required /></label><label>Company<input name="company" required /></label><label>Phone number<input name="phone" /></label><label class="wide">Job or advertising enquiry<textarea name="message" rows="4" required placeholder="Tell us about the vacancy or advertising package you need."></textarea></label><button type="submit">Send employer enquiry →</button><small class="form-message"></small></form></section>
       <section class="contact-section section contact-light" id="contact"><div><p class="eyebrow">CONTACT WORKSA</p><h2>How can we help?</h2><p>Report a listing, request help or share feedback. We read every message.</p></div><form class="contact-form" data-inquiry="contact"><label>Your name<input name="name" required /></label><label>Email address<input name="email" type="email" required /></label><label class="wide">Subject<input name="subject" required /></label><label class="wide">Message<textarea name="message" rows="4" required></textarea></label><button type="submit">Send message →</button><small class="form-message"></small></form></section>
     </main>
+    <main id="opportunityPage" class="view opportunity-page" hidden></main>
     <section id="jobDetail" class="view" hidden></section>
     <section id="adminApp" class="admin-view" hidden></section>
     <footer><a class="brand" href="#home"><span>work</span>SA<i></i></a><p>Free access to verified South African opportunities.</p><small>© 2026 WorkSA. Built for opportunity.</small></footer>

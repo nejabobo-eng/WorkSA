@@ -31,7 +31,8 @@ create table public.jobs (
   category_id bigint not null references public.categories(id),
   province text not null,
   city text not null,
-  job_type text not null check (job_type in ('Permanent', 'Temporary', 'Contract', 'Part-time', 'Internship', 'Learnership')),
+  job_type text not null check (job_type in ('Permanent', 'Temporary', 'Contract', 'Part-time', 'Internship', 'Learnership', 'Grant', 'Funding', 'RFQ')),
+  listing_type text not null default 'Job' check (listing_type in ('Job', 'Funding', 'RFQ')),
   salary text,
   advertised_at date not null default current_date,
   closing_date date not null,
@@ -96,6 +97,7 @@ create trigger jobs_activity_log after insert or update on public.jobs
 for each row execute function public.log_job_change();
 
 create index jobs_public_feed_idx on public.jobs (status, closing_date, advertised_at desc);
+create index jobs_listing_type_feed_idx on public.jobs (listing_type, status, closing_date, advertised_at desc);
 create index jobs_category_feed_idx on public.jobs (category_id, status, advertised_at desc);
 create index jobs_title_search_idx on public.jobs using gin (title gin_trgm_ops);
 create index jobs_company_search_idx on public.jobs using gin (company gin_trgm_ops);
